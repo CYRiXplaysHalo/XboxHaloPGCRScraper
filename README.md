@@ -11,7 +11,7 @@ Simple python script that can be used to automatically save screenshots of post 
   - pytesseract
 - Run the script via command line like so:
   - "Scrape_PGCR_From_Video.py -v out.mp4" without the quotations
-  - The script should update it's status in the command line video
+  - The script should update it's status in the command line window.
   - If the script finds a PGCR frame, it will save it in the folder the script is located in.
     - The image has the naming scheme of M_SS.png where M = minutes and S = seconds (into the video file)
 

@@ -14,17 +14,14 @@ args = vars(ap.parse_args())
 vidcap = cv2.VideoCapture(args["index"])
 
 #get video file info
-fps = vidcap.get(cv2.CAP_PROP_FPS)
 count = 0
-vidcap.set(1,count-1)
 success,image = vidcap.read()
 height, width, channels = image.shape
 banner_height = int((80/480)*height)
 pgcr_flag = 0
 
-print("Video Framerate = " + str(fps))
 print("Video Resolution = " + str(height) + "x" + str(width))
-print("Reading video")
+print("Reading capture device now. Force quit to stop.")
 
 while success:
     print("Reading frame " + str(count))
@@ -42,7 +39,7 @@ while success:
     if "POSTGAME CARNAGE REPORT" in text and pgcr_flag == 0:
         minutes = int(count/60)
         seconds = count % 60
-        print("pgcr present = " + str(count))
+        print("PGCR Present at frame " + str(count))
         cv2.imwrite(str(minutes) + "_" + str(seconds) + ".png", image)
         pgcr_flag = 1
     #to prevent screenshotting the same PGCR potentially hundreds of times, use this flag prevent that
@@ -50,8 +47,5 @@ while success:
         pgcr_flag = 0
 
     #increment video by one second, then read frame
-    count += int(fps)
-    vidcap.set(1,count-1)
     success,image = vidcap.read()
     
-print("Script complete")

@@ -42,7 +42,7 @@ while success:
     if "POSTGAME CARNAGE REPORT" in text and pgcr_flag == 0:
         minutes = int(count/60)
         seconds = count % 60
-        print("pgcr present = " + str(count))
+        print("PGCR found at frame " + str(count))
         cv2.imwrite(str(minutes) + "_" + str(seconds) + ".png", image)
         pgcr_flag = 1
     #to prevent screenshotting the same PGCR potentially hundreds of times, use this flag prevent that

@@ -13,7 +13,7 @@ Simple python script that can be used to automatically save screenshots of post 
   - "Scrape_PGCR_From_Video.py -v out.mp4" without the quotations
   - The script should update it's status in the command line window.
   - If the script finds a PGCR frame, it will save it in the folder the script is located in.
-    - The image has the naming scheme of M_SS.png where M = minutes and S = seconds (into the video file)
+    - The image has the naming scheme of M_SS.png where M = minutes and SS = seconds (into the video file)
 
 Getting tesseract OCR to work in Python isn't super easy. Please follow the instructions on their website to make sure it's working: https://pypi.org/project/pytesseract/
 

@@ -1,6 +1,22 @@
 # XboxHaloPGCRScraper
 Simple python script that can be used to automatically save screenshots of post game carnage reports in the xbox game Halo 1.
 
+# How it works
+
+- We take the top 16% of the frame, convert it to grayscale, run OCR on it and see if it says "POSTGAME CARNAGE REPORT"
+
+![Nope](https://raw.githubusercontent.com/CYRiXplaysHalo/XboxHaloPGCRScraper/master/13844.png)
+
+![Nope](https://raw.githubusercontent.com/CYRiXplaysHalo/XboxHaloPGCRScraper/master/11312.png)
+
+There we go:
+
+![Yup!](https://raw.githubusercontent.com/CYRiXplaysHalo/XboxHaloPGCRScraper/master/10096.png)
+
+And then we save the whole screen:
+
+![Perfect!](https://raw.githubusercontent.com/CYRiXplaysHalo/XboxHaloPGCRScraper/master/4_21.png)
+
 # Instructions
 
 - Get Python (I used 3.7) and install the following libraries
@@ -23,4 +39,3 @@ Simple python script that can be used to automatically save screenshots of post 
 Getting tesseract OCR to work in Python isn't super easy. Please follow the instructions on their website to make sure it's working: https://pypi.org/project/pytesseract/
 
 I also recommend running this script in the base Python folder, to prevent an error that looks like this: https://stackoverflow.com/questions/24672531/annoying-python-tesseract-error-error-opening-data-file-tessdata-eng-trainedda
-

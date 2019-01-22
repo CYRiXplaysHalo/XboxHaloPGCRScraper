@@ -3,6 +3,8 @@ Simple python script that can be used to automatically save screenshots of post 
 
 # How it works
 
+![Video of it in action](https://www.twitch.tv/videos/367828464)
+
 - We take the top 16% of the frame, convert it to grayscale, run OCR on it and see if it says "POSTGAME CARNAGE REPORT"
 
 ![Nope](https://raw.githubusercontent.com/CYRiXplaysHalo/XboxHaloPGCRScraper/master/13844.png)

@@ -35,8 +35,16 @@ And then we save the whole screen:
     - The index number represents which connected capture device to pull from. If you only have one capture device that index is 0. Unfortunately there is no current way to list the indices of all capture devices so you will probably just have to increment the index until it works for you.
     - To stop the script from running, just exit out of the command line window.
   - The script should update it's status in the command line window.
+    - When the script first starts it will save a test screen shot to the local folder named "HH-MM-SS - Test Screenshot.png"
+      - Use this to verify the capture device index you provided is the right one.
   - If the script finds a PGCR frame, it will save it in the folder the script is located in.
-    - The image has the naming scheme of M_SS.png where M = minutes and SS = seconds (into the video file)
+    - The image has the naming scheme of "HH-MM-M-SS - PGR.png" 
+      - HH = hours, M = minutes and SS = seconds (into the video file)
+  - The script will also keep series score.
+    - It does this by writing the score for each team into the following files:
+      - Blue team = blue_team_series_score.txt
+      - Red team = red_team_series_score.txt
+    - To reset the series score, simply edit the text files.
 
 Getting tesseract OCR to work in Python isn't super easy. Please follow the instructions on their website to make sure it's working: https://pypi.org/project/pytesseract/
 

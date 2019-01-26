@@ -45,6 +45,10 @@ And then we save the whole screen:
       - Blue team = blue_team_series_score.txt
       - Red team = red_team_series_score.txt
     - To reset the series score, simply edit the text files.
+  - To see the capture device script in action, watch this video: https://www.twitch.tv/videos/370337250
+  - It is recommended you use the OBS-VirtualCam plug-in as the input capture device for this script.
+    - You can run two instances of OBS-Studio at once
+    - You can find the OBS-VirtualCam plug-in here: https://obsproject.com/forum/resources/obs-virtualcam.539/
 
 Getting tesseract OCR to work in Python isn't super easy. Please follow the instructions on their website to make sure it's working: https://pypi.org/project/pytesseract/
 
